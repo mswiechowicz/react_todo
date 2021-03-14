@@ -1,6 +1,7 @@
 {
   "name": "react_todo",
-  "version": "0.1.0",
+  "author": "Maciej Świechowicz",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",

@@ -1,0 +1,21 @@
+.TodoTask button {
+    margin: 0 5px 0 5px;
+}
+.TodoTask span {
+    color: lightgrey;
+}
+
+.TodoTask__remove {
+    color: crimson;
+    font-weight: bolder;
+}
+
+.TodoTask__done:hover {
+    background-color: darkgreen;
+    color: white;
+}
+
+.TodoTask__remove:hover {
+    background-color: red;
+    color: white;
+}
