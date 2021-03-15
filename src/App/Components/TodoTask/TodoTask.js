@@ -5,7 +5,7 @@ class TodoTask extends Component
 {
     render() {
         const {task_priority: priority, task_name: name, task_deadline: deadline, type, id, removeTask, doneTask, task_done} = this.props;
-        const taskProps = { task_priority: priority, task_name: name, task_deadline: deadline};
+        // const taskProps = { task_priority: priority, task_name: name, task_deadline: deadline};
         const color = priority ? "red" : "white";
         return (
                 <li className="TodoTask">
@@ -15,7 +15,7 @@ class TodoTask extends Component
                         : <span> deadline was: {deadline} <br/>done: {task_done} </span>
                     }
                     {type === "todoList" && (
-                        <button className={"TodoTask__done"} onClick={() => doneTask(id, taskProps)}>Done</button>
+                        <button className={"TodoTask__done"} onClick={() => doneTask(id)}>Done</button>
                     )}
                     <button className={"TodoTask__remove"} onClick={() => removeTask(id, type)}>X</button>
                 </li>

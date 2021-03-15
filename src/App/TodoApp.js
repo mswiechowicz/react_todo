@@ -19,17 +19,17 @@ class TodoApp extends Component {
     };
 
     handleRemoveTask = (index, type) => {
-        const taskList = type === "todoList" ? [...this.state.todoList] : [...this.state.doneList];
+        const taskList =  [...this.state[type]];
         taskList.splice(index, 1);
         this.setState({ [type]: taskList });
     };
 
-    handleDoneTask = (index, taskProps) => {
-        taskProps.task_done = new Date().toLocaleString();
+    handleDoneTask = index => {
         const todoList = [ ...this.state.todoList ];
-        todoList.splice(index, 1);
+        const doneTask = todoList.splice(index, 1);
+        doneTask.task_done = new Date().toLocaleString();
         this.setState({
-            doneList: this.state.doneList.concat(taskProps),
+            doneList: this.state.doneList.concat(doneTask),
             todoList
         });
     };

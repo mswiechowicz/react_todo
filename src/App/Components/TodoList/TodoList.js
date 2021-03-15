@@ -20,7 +20,6 @@ class TodoList extends Component
         let { taskList } = this.props;
         taskList = this.sortListAlphabetically(taskList);
         // taskList = type === "todoList" ? this.sortListAlphabetically(taskList) : this.sortListByDate(taskList);
-        console.log(taskList);
         const taskListToShow = taskList.map((task,id) => (
             <TodoTask key={id} {...task} id={id} type={type} doneTask={doneTask} removeTask={removeTask}/>)
         );

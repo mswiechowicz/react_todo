@@ -59,7 +59,7 @@ class TaskAdder extends Component
                                 checked={priority}
                                 onChange={this.handleChange}
                             />
-                            Priority
+                            High priority
                         </label>
                     </div>
                     <label>Deadline:
